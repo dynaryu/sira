@@ -1,0 +1,343 @@
+/*
+-------------------------------
+Sphinx theme customisation
+-------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap');
+
+
+body {
+    background-color: #edf0f2;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', 'Roboto', 'Helvetica', sans-serif;
+    font-size: 16px;
+    color: #222222;
+    line-height: 1.5;
+}
+
+/* ------------------------------------------------------------------- */
+/* Adjust bottom margins in body text, including lists */
+
+.rst-content p {
+    margin-bottom: 0.9em;
+}
+
+.rst-content .citation p {
+    margin-bottom: revert;
+}
+
+/* Increase gap between list marker and list item text;
+add spacing between items */
+.rst-content ul li,
+.rst-content ol li {
+    padding-inline-start: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+/* Reduce bottom margin of the list block itself */
+.rst-content .section ul, .rst-content section ul,
+.rst-content .section ol, .rst-content section ol,
+.rst-content .section ol.arabic, .rst-content section ol.arabic {
+    margin-bottom: 0.9em;
+}
+
+/* ------------------------------------------------------------------- */
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
+    color: #333333;
+    font-weight: 600;
+    font-family: 'Lora', 'Roboto Slab', 'Arbutus Slab', serif;
+    line-height: 115%;
+}
+
+.rst-content .toctree-wrapper p.caption {
+    padding: 15px 10px 10px 0px;
+    margin: 10px 0 5px 0px;
+    font-size: 40px;
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #97c3e0;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 1.618em;
+    margin: 12px 0 0 0;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 85%;
+    white-space: nowrap;
+}
+
+/*
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+    padding: 0;
+    font-weight: 500;
+    font-family: 'Roboto Slab', 'Lora', serif;
+    line-height: 115%;
+}
+*/
+
+h1 {
+    font-size: 38px;
+    padding: 10px 0px 10px 0px;
+    margin: 20px 0px 20px 0px;
+    background-color: none;
+    width: 100%;
+}
+
+h2 {
+    font-size: 28px;
+    padding: 10px 5px 10px 0px;
+    margin: 5px 0 5px 0px;
+}
+
+h3 {
+    font-size: 22px;
+    padding: 10px 10px 10px 0px;
+    margin: 10px 0 10px 0px;
+}
+
+h2:before {
+    content: ' ';
+    display: block;
+    width: 60px;
+    padding-top: 25px;
+    border-top: 8px solid #444444;
+}
+
+h3:before {
+    content: ' ';
+    display: block;
+    width: 67px;
+    padding-top: 20px;
+    border-top: 4px solid #444444;  /* #797878 */
+}
+
+.rst-content table.docutils td,
+table td {
+    font-size: 95%;
+    border: none;
+    border-collapse: collapse;
+    background-color: transparent;
+    vertical-align: top;
+    margin: 0;
+    overflow: visible;
+    padding: 5px 5px;
+    border-image-width: 0;
+}
+
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+    background-color: transparent;
+}
+
+.rst-content table.docutils {
+    border: none;
+}
+
+.rst-content table.field-list .field-name {
+    font-size: 95%;
+    padding: 5px 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.rst-content table.field-list .field-body {
+    text-align: left;
+    padding-left: 5px;
+}
+
+.rst-content table.docutils div.line-block {
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.rst-content a {
+    color: #2453ec;  /* #3348ff; */
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+    font-weight: 500;
+}
+
+.rst-content a:visited {
+    color: #c70dc7; /* #5a6aff; */
+    text-decoration: none;
+}
+
+/* Remove border from toctree links */
+.rst-content .toctree-wrapper a {
+    border-bottom: none;
+}
+
+/* Content area links only - not sidebar menu */
+.rst-content a:hover {
+    /* color: orangered; */
+    border-bottom: 2px solid;
+}
+
+/* Remove border from breadcrumbs */
+.wy-breadcrumbs a,
+.wy-breadcrumbs-aside a {
+    border-bottom: none;
+}
+
+.wy-menu-vertical a:hover {
+    background-color: #4e4a4a;
+    cursor: pointer;
+}
+
+.wy-menu a:hover {
+    text-decoration: none;
+    border: none;
+}
+
+.wy-side-nav-search > a:hover, .wy-side-nav-search .wy-dropdown > a:hover {
+    border: none;
+    text-decoration: none;
+}
+
+.wy-side-nav-search input[type=text] {
+    width: 100%;
+    border-radius: 7px;
+    padding: 8px 12px;
+    border-color: #2472a4;
+}
+
+/* Customise Definition List */
+.rst-content dl:not(.docutils) dt {
+    display: table;
+    margin: 10px 0 10px 0;
+    font-size: 95%;
+    line-height: normal;
+    background: #FFFFFF;  /* #e7f2fa */
+    color: #2980B9;
+    border-left: solid 5px #78bbeb; /* #79bae6; #6ab0de; */
+    border-top: none;
+    padding: 1px 4px 2px 8px;
+    position: relative;
+}
+
+.rst-content dl:not(.docutils) dl dt {
+    margin: 4px 0;
+    border: none;
+    /* border-left: solid 4px #ccc; */
+    background: none;
+    color: #555;
+    padding: 2px 4px;
+    font-weight: bold;
+}
+
+.rst-content dl p, .rst-content dl table, .rst-content dl ul, .rst-content dl ol {
+    margin-bottom: 6px !important;
+    font-size: 95%;
+}
+
+.rst-content dl dt {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 14px;
+}
+
+.rst-content dl dd {
+    margin: 0 0 12px 24px;
+    line-height: 1.5em;
+}
+
+.rst-content p.rubric {
+    color: #3a3a3a;
+    margin-bottom: 18px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 110%;
+}
+
+/* Customize admonition directives */
+
+.rst-content .note .admonition-title {
+    font-size: 95%;
+    font-weight: bold;
+}
+.rst-content .note p { font-size: 95%; }
+
+.rst-content .warning p { font-size: 95%; }
+.rst-content .tip p { font-size: 95%; }
+.rst-content .important p { font-size: 100%; }
+
+/* Ensure code blocks display syntax highlighting properly */
+.rst-content pre.literal-block,
+.rst-content div[class^='highlight'] {
+    margin: 1em 0;
+}
+
+.rst-content div[class^='highlight'] pre {
+    color: inherit;  /* Let Pygments handle colors */
+}
+
+/* Apply custom font to all code & cite elements */
+
+@font-face {
+    font-family: "Fira Code";
+    src: url('../fonts/FiraCode/FiraCode-VF.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.rst-content cite {
+    font-family: "Fira Code", Consolas, monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 90%;
+    color: #cf493a;
+}
+
+.rst-content pre,
+.rst-content div[class^='highlight'] pre,
+.rst-content pre.literal-block {
+    font-family: "Fira Code", Consolas, monospace;
+    font-size: 80%;
+    font-variant-ligatures: common-ligatures; /* Enable ligatures */
+}
+
+.rst-content code.literal,.rst-content tt.literal {
+    color: #c41a16;
+    white-space: normal
+}
+
+.rst-content code,.rst-content tt,code {
+    white-space: nowrap;
+    max-width: 100%;
+    background: #fff;
+    border: 1px solid #e1e4e5;
+    font-size: 85%;
+    padding: 0 5px;
+    font-family: "Fira Code",Consolas,SFMono-Regular,Menlo,monospace;
+    color: #c41a16;
+    overflow-x: auto
+}
+
+/* override table width restrictions */
+@media screen and (min-width: 767px) {
+
+   .wy-table-responsive table td {
+      /* !important prevents the common CSS stylesheets from overriding
+         this as on RTD they are loaded after this stylesheet */
+      white-space: normal !important;
+   }
+
+   .wy-table-responsive {
+      overflow: visible !important;
+   }
+}
